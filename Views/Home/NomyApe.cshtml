@@ -1,0 +1,29 @@
+@model List<NomyApe>
+
+
+
+<div class="row">
+    <div class="rol">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"># Registro</th>
+                    <th scope="col">Nombre</th>  
+                    <th scope="col">Apellido</th>  
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var NomyApe in Model.ToList())
+                    {
+                        <tr>
+                            <th>#@NomyApe.id</th>
+                            <th>@NomyApe.Name</th>
+                            <th>@NomyApe.Surname</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
